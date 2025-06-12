@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="base_styles.css" />
+    <link rel="stylesheet" href="main_styles.css" />
+    <title>BACK2Bits</title>
+  </head>
+  <body>
+  	<header>
+    	<h1 style="line-height: 60%;">BACK</br>Bits<span style="font-size:200%; background:linear-gradient(0deg, var(--acc-color), var(--acc2-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">2</span></h1>
+    	<div id="header-wrapper">
+      <input type="text" id="search-input" placeholder="Suchen"/>
+      <a href="cart.html" id="cart-button" style="position:relative;">
+        <img src="./Images/Icons/shopping-cart.svg" alt="Cart" style="filter: invert(1) brightness(100); width:50px; height:50px;">
+        <span id="cart-count-badge"></span>
+      </a>
+    </div>
+    </header>
+
+
+    <ul id="sidebar" onmouseenter="openSidebar()" onmouseleave="closeSidebar()">
+		<span class="indicator-square"></span>
+    	<li style="background-image: url('./Images/Logos/Nintendo-Logo.png')">
+			<a href="#Nintendo">NINTENDO</a>
+		</li>
+    	<li style="background-image: url('./Images/Logos/Sega-Logo.png')">
+			<a href="#Sega">SEGA</a>
+		</li>
+    	<li style="background-image: url('./Images/Logos/Atari-Logo.png')">
+			<a href="#Atari">ATARI</a>
+		</li>
+    	<li style="background-image: url('./Images/Logos/Sony-Logo.png')">
+			<a href="#Sony">SONY</a>
+		</li>
+    </ul>
+    
+    <section id="product-container"></section>
+    
+    
+    
+    <script src="products.js"></script>
+    <script src="main_script.js"></script>
+    <script src="cart_badge.js"></script>
+  </body>
+</html>

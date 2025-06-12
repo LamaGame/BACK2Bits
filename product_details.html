@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Produktdetails</title>
+    <link rel="stylesheet" href="base_styles.css">
+    <link rel="stylesheet" href="product_details_styles.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" style="padding-right: 5%;">
+                <img src="./Images/Icons/arrow-left.svg" alt="Zurück" style="width:50px; height:50px; filter: invert(1) brightness(100);" />
+            </a>
+        <h2>Product Details</h2>
+        <div id="header-wrapper">
+            <a href="cart.html" id="cart-button" style="position:relative;">
+                <img src="./Images/Icons/shopping-cart.svg" alt="Cart" style="filter: invert(1) brightness(100); width:50px; height:50px;">
+                <span id="cart-count-badge"></span>
+            </a>
+        </div>
+    </header>
+    <div id="details-container">
+        <div id="product-images">
+            <div id="image-nav" class="image-nav"></div>
+            <img id="main-product-img" src="" alt="Produktbild">
+        </div>
+        <div id="product-info">
+        	<h2 id="product-title"></h2>
+            <div id="product-rating"></div>
+            <div id="product-description"></div>
+            <div id="product-tags"></div>
+            <div id="product-price"></div>
+            <button id="add-to-cart-btn">In den Warenkorb</button>
+        </div>
+    </div>
+    <script src="products.js"></script>
+    <script src="product_details_script.js"></script>
+    <script src="main_script.js"></script>
+</body>
+</html>

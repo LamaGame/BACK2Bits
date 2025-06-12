@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="UTF-8">
+	<title>Warenkorb</title>
+	<link rel="stylesheet" href="base_styles.css">
+	<link rel="stylesheet" href="cart_styles.css">
+</head>
+<body>
+	<header>
+		<h1>Warenkorb</h1>
+		<a href="index.html" style="padding-right: 20px;"><img src="./Images/Icons/arrow-left.svg" alt="Zurück" style="width:50px; height:50px; filter: invert(1) brightness(100);" /></a>
+	</header>
+
+	<div id="border"><section id="cart-container"></section></div>
+
+	<!-- Checkout Modal -->
+	<div id="checkout-modal" class="checkout-modal" style="display:none;">
+		<div class="checkout-modal-content">
+			<span id="checkout-close" class="checkout-close">&times;</span>
+			<h2>Zahlungsmethode wählen</h2>
+			<div class="checkout-methods-grid">
+				<div class="checkout-method-card" disabled>
+					<img src="./Images/Logos/paypal.svg" alt="PayPal" class="checkout-method-logo" />
+					<div class="checkout-method-name">PayPal</div>
+					<div class="checkout-method-unavailable">(bald verfügbar)</div>
+				</div>
+				<div class="checkout-method-card" disabled>
+					<img src="./Images/Logos/creditcard.svg" alt="Kreditkarte" class="checkout-method-logo" />
+					<div class="checkout-method-name">Kreditkarte</div>
+					<div class="checkout-method-unavailable">(bald verfügbar)</div>
+				</div>
+				<div class="checkout-method-card" disabled>
+					<img src="./Images/Logos/applepay.svg" alt="Apple Pay" class="checkout-method-logo" />
+					<div class="checkout-method-name">Apple Pay</div>
+					<div class="checkout-method-unavailable">(bald verfügbar)</div>
+				</div>
+				<div class="checkout-method-card" disabled>
+					<img src="./Images/Logos/googlepay.svg" alt="Google Pay" class="checkout-method-logo" />
+					<div class="checkout-method-name">Google Pay</div>
+					<div class="checkout-method-unavailable">(bald verfügbar)</div>
+				</div>
+			</div>
+			<p style="margin-top:20px; color:var(--acc-color);">Alle Zahlungsmethoden sind aktuell deaktiviert.</p>
+		</div>
+	</div>
+	<div id="checkout-overlay" class="checkout-overlay" style="display:none;"></div>
+
+	<script src="products.js"></script>
+	<script src="cart_script.js"></script>
+</body>
+</html>

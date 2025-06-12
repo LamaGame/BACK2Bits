@@ -1,0 +1,143 @@
+#header-wrapper {
+	justify-content: flex-end;
+	margin-right: 10px;
+}
+
+#product-title {
+	font-size: min(2rem, 7vw);
+	margin: 0;
+}
+
+#details-container {
+	width: 100%;
+	height: 80vh;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding-bottom: 15px;
+	gap: 20px;
+}
+
+#product-images {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 20px;
+	height: 100%;
+	width: 60%;
+}
+
+#product-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	gap: 1rem;
+	height: 100%;
+	width: 40%;
+	margin-right: 20px;
+}
+
+#main-product-img {
+	object-fit: contain;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	max-width: calc(60vw - 105px);
+}
+
+#image-nav {
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.image-nav-btn {
+	display: block;
+	border-radius: 0;
+	font-family: 'Press Start 2P';
+	font-size: 1.5rem;
+	background-color: var(--shadow-color3);
+	border: 5px var(--shadow-color2) solid;
+	height: 50px;
+	width: 50px;
+	color: var(--font-color);
+	margin: 7.5px;
+	transition: 0.1s ease-in;
+	cursor: pointer;
+}
+
+.image-nav-btn:hover {
+	border: 6px var(--shadow-color2) solid;
+}
+
+.image-nav-btn:active {
+	border: 0px var(--shadow-color2) solid;
+}
+
+#product-description {
+	font-size: 1.5rem;
+	line-height: 1.75;
+}
+
+#product-tags {
+	color: var(--acc-color);
+}
+
+#product-price {
+	font-size: 2rem;
+	align-self: center;
+}
+
+
+/* Rating bar styles */
+.rating-bar-container {
+	position: relative;
+	width: 100%;
+	height: 40px;
+	background: #222;
+	overflow: hidden;
+	margin: 8px 0;
+}
+
+.rating-bar {
+	height: 100%;
+	background: linear-gradient(90deg, var(--acc2-color) 0%, var(--acc-color) 100%);
+	transition: width 0.3s;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.rating-bar-angled {
+	clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 0 100%);
+}
+
+.rating-bar:not(.rating-bar-angled) {
+	clip-path: none;
+}
+
+
+
+@media (max-width: 700px) {
+	#details-container {
+		flex-direction: column;
+	}
+	#product-images {
+		width: 100%;
+		flex-direction: column-reverse;
+	}
+	#product-info {
+		width: calc(100% - 40px);
+		padding-bottom: 20px;
+	}
+	#image-nav {
+		flex-direction: row;
+		justify-content: center;
+	}
+	#main-product-img {
+		max-width: calc(100% - 40px);
+	}
+}
+
